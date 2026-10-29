@@ -3,10 +3,9 @@
 </svelte:head>
 
 <main>
+	<h1>Sporting Club Aiken</h1>
 	<video src="/logo-video-glass.mp4" autoplay muted loop playsinline aria-label="Sporting Club Aiken logo"></video>
 </main>
-
-<footer>Sporting Club Aiken</footer>
 
 <style>
 	:global(html, body) {
@@ -16,29 +15,21 @@
 
 	main {
 		display: grid;
-		place-items: center;
+		place-content: center;
+		justify-items: center;
+		gap: 1.5rem;
 		min-height: 100dvh;
 	}
 
 	video {
-		width: min(540px, 90vw);
+		width: min(270px, 45vw);
 		height: auto;
 	}
 
-	footer {
-		position: fixed;
-		inset: auto 0 1.5rem;
-		width: fit-content;
-		margin: auto;
-		padding: 0.6em 1.4em 0.6em 1.6em; /* extra left offsets trailing letter-spacing */
-		border: 1px solid rgb(255 255 255 / 0.1);
-		border-radius: 999px;
-		background: linear-gradient(rgb(170 190 200 / 0.12), rgb(170 190 200 / 0.04));
-		box-shadow: inset 0 1px rgb(255 255 255 / 0.12);
-		backdrop-filter: blur(12px);
-		font: 1rem 'Bebas Neue', sans-serif;
+	h1 {
+		margin: 0;
+		font: 0.8125rem 'Bebas Neue', sans-serif;
 		letter-spacing: 0.2em;
-		text-transform: uppercase;
-		color: rgb(160, 172, 176);
+		color: rgb(255 255 255 / 0.6);
 	}
 </style>

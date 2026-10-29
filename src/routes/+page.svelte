@@ -1,10 +1,17 @@
+<script lang="ts">
+	let video: HTMLVideoElement;
+</script>
+
 <svelte:head>
 	<title>Sporting Club Aiken</title>
 </svelte:head>
 
+<!-- mobile browsers pause video when backgrounded; resume on return -->
+<svelte:document onvisibilitychange={() => !document.hidden && video.play()} />
+
 <main>
 	<h1>Sporting Club Aiken</h1>
-	<video src="/logo-video-glass.mp4" autoplay muted loop playsinline aria-label="Sporting Club Aiken logo"></video>
+	<video bind:this={video} src="/logo-video-glass.mp4" autoplay muted loop playsinline aria-label="Sporting Club Aiken logo"></video>
 </main>
 
 <style>

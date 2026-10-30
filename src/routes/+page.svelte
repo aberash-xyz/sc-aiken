@@ -1,5 +1,6 @@
-<script lang="ts">
-	let video: HTMLVideoElement;
+<script>
+	/** @type {HTMLVideoElement} */
+	let video;
 </script>
 
 <svelte:head>
